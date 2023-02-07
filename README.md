@@ -4,8 +4,6 @@ The following are the key features of the Todo-Today MERN stack application:
 
 Edit: edit existing tasks and update them with new information.
 
-Update: update the status of the tasks (e.g., from "to-do" to "done").
-
 Delete: delete tasks that are no longer needed.
 
 Add: add new tasks to the list.
