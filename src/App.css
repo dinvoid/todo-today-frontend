@@ -1,0 +1,132 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    width: 500px;
+    margin: 50px auto;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.form {
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    width: 85%;
+    margin: 5px auto;
+    padding: 5px;
+}
+
+.form input[type="text"] {
+    padding: 10px;
+    width: 90%;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    margin: 4px auto;
+    margin-left: 10px;
+}
+
+.form textarea {
+    margin-left: 10px;
+    width: 399px;
+    height: 95px;
+    resize: none;
+    border-radius: 3px;
+}
+
+.form input[type="text"]:focus,
+.form button[type="submit"]:focus {
+    outline: none;
+}
+
+.form button[type="submit"] {
+    background-color: #008080;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.form-activity {
+    display: flex;
+    justify-content: space-around;
+}
+
+.form-activity button {
+    width: 25%;
+}
+
+.cancel {
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.todo-list-item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.todo-item {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    border: none;
+    background-color: #e1e1e1;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item {
+    padding-left: 6px;
+}
+
+.todo-title {
+    font: 20px solid black;
+}
+
+.activity {
+    display: flex;
+    flex-direction: column;
+}
+
+.activity {
+    margin: 2px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+}
+
+.edit-button {
+    background-color: goldenrod;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.update-button {
+    background-color: green;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}

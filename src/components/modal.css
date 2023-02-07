@@ -1,0 +1,62 @@
+.modalContainer {
+    background-color: #c4c4ce;
+    width: 100%;
+    height: auto;
+    border: 1px solid red;
+    border-radius: 6px;
+    margin: 0 auto;
+    padding: 10px;
+    z-index: 9999;
+}
+
+.modalContainer input {
+    height: 2rem;
+    outline: none;
+    border: none;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.modal-body textarea {
+    height: 89px;
+    width: 419px;
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1rem;
+    column-gap: 8px;
+}
+
+.modal-footer button {
+    cursor: pointer;
+    color: #fff;
+    border: none;
+    padding: 5px;
+}
+
+.modal-footer button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.modal-footer .updates {
+    background-color: green;
+}
+
+.modal-footer .close {
+    background-color: red;
+}
+
+.modal-footer .updates:active {
+    background-color: green;
+}
+
+.modal-footer .close:active {
+    background-color: red;
+}
