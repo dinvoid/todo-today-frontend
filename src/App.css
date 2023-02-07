@@ -48,6 +48,16 @@
     cursor: pointer;
 }
 
+.form button[type="submit"]:hover {
+    background-color: blue;
+    color: white;
+}
+
+.form button[type="submit"]:active {
+    background-color: #008080;
+    color: #fff;
+}
+
 .form-activity {
     display: flex;
     justify-content: space-around;
@@ -64,6 +74,16 @@
     border-radius: 6px;
     padding: 10px;
     cursor: pointer;
+}
+
+.cancel:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.cancel:active {
+    background-color: red;
+    color: #fff;
 }
 
 .todo-list-item {
@@ -112,6 +132,16 @@
     cursor: pointer;
 }
 
+.edit-button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.edit-button:active {
+    background-color: goldenrod;
+    color: #fff;
+}
+
 .update-button {
     background-color: green;
     color: #fff;
@@ -120,6 +150,17 @@
     padding: 5px;
     cursor: pointer;
 }
+
+.update-button:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.update-button:active {
+    background-color: green;
+    color: #fff;
+}
+
 .backdrop {
     position: fixed;
     top: 0;

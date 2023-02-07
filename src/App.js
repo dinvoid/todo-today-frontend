@@ -63,7 +63,7 @@ function App() {
         //before updating we need to show input fields where we will create our updated item 
 
     const clearItem = () => {
-        if (title && description) {
+        if (title || description) {
             setTitle('')
             setDescription('')
         }
@@ -71,95 +71,79 @@ function App() {
     }
 
     return (
-
-        <
-        div className = "App" >
-        <
-        h1 > To Do Today < /h1> <
-        form className = "form" >
-        <
-        div className = "inputs" >
-        <
-        input type = "text"
-        placeholder = "Your title"
-        onChange = { e => { setTitle(e.target.value) } }
-        value = { title }
-        /> <
-        textarea placeholder = "Description..."
-        onChange = { e => { setDescription(e.target.value) } }
-        value = { description } > < /textarea> < /
-        div > <
-        div className = "form-activity" >
-        <
-        button type = "submit"
-        onClick = { e => { addItem(e) } } > Add < /button> <
-        button type = "button"
-        className = "cancel"
-        onClick = {
-            () => { clearItem() }
-        } > Clear < /button> < /
-        div > <
-        /form>
-
-        <
-        div className = "todo-list-item" >
-
-        {
-            openModal && ( <
-                >
-                <
-                div className = "backdrop" > < /div> <
-                Modal data = { data }
-                setData = { setData }
-                isUpdating = { isUpdating }
-                onClose = { setOpenModal }
-                /> < / >
-            )
-        } {
-            data.map((item) => (
-
-                <
-                div className = "todo-item"
-                key = { item._id } >
-
-                <
-                div className = "item" >
-                <
-                p className = "todo-title" > < strong > { item.title } < /strong></p >
-                <
-                p className = "todo-desc" > { item.description } < /p> < /
-                div > <
-                span className = "activity" >
-                <
-                button className = "edit-button"
-                onClick = {
-                    () => {
-                        if (window.confirm("Are you sure you want to delete this item?")) {
-                            deleteItem(item._id)
-                        }
-                    }
-                } >
-                Delete <
-                /button> <
-                button className = "update-button"
-                onClick = {
-                    () => {
-                        setisUpdating(item._id);
-                        setOpenModal(!openModal)
-                    }
-                } > Edit < /button>
-
-                <
-                /span>  
-
-                <
-                /div>
-            ))
-        } <
-        /div>
-
-        <
-        /div>
+        <div className="App">
+        <h1>To Do Today</h1>
+        <form className="form">
+          <div className="inputs">
+            <input
+              type="text"
+              placeholder="Your title"
+              onChange={(e) => {
+                setTitle(e.target.value);
+              }}
+              value={title}
+            />
+            <textarea
+              placeholder="Description..."
+              onChange={(e) => {
+                setDescription(e.target.value);
+              }}
+              value={description}
+            ></textarea>
+          </div>
+          <div className="form-activity">
+            <button type="submit" onClick={(e) => {
+              addItem(e);
+            }}>
+              Add
+            </button>
+            <button type="button" className="cancel" onClick={() => {
+              clearItem();
+            }}>
+              Clear
+            </button>
+          </div>
+        </form>
+        <div className="todo-list-item">
+          {openModal && (
+            <>
+              <div className="backdrop"></div>
+              <Modal
+                data={data}
+                setData={setData}
+                isUpdating={isUpdating}
+                onClose={setOpenModal}
+              />
+            </>
+          )}
+          {data.map((item) => (
+            <div className="todo-item" key={item._id}>
+              <div className="item">
+                <p className="todo-title">
+                  <strong>{item.title}</strong>
+                </p>
+                <p className="todo-desc">{item.description}</p>
+              </div>
+              <span className="activity">
+                <button className="edit-button" onClick={() => {
+                  if (window.confirm("Are you sure you want to delete this item?")) {
+                    deleteItem(item._id);
+                  }
+                }}>
+                  Delete
+                </button>
+                <button className="update-button" onClick={() => {
+                  setisUpdating(item._id);
+                  setOpenModal(!openModal);
+                }}>
+                  Edit
+                </button>
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+      
     );
 }
 
